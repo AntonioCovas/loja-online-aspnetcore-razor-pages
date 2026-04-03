@@ -27,7 +27,7 @@
             </thead>
             <tbody>
                 @foreach (var item in Model.Clientes)
-                {   
+                {
                     <tr>
                         <td>@Html.DisplayFor(modelItem => item.Nome)</td>
                         <td>@Html.DisplayFor(modelItem => item.CPF)</td>
@@ -49,3 +49,9 @@
         <h2>Não há clientes cadastrados.</h2>
     }
 </main>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_CustomConfirm");
+    }
+}
