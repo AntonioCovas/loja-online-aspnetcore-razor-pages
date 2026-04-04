@@ -1,13 +1,13 @@
 ﻿@page
 @model AspNetCoreWebApp.Pages.ClienteCRUD.IndexModel
 @{
-    ViewData["Titulo"] = "Listagem de clientes";
+    ViewData["Titulo"] = "Listagem de Clientes";
 }
 
 <header class="container p-3">
     <div class="row align-items-center">
         <div class="col-sm-6"><h1>@ViewData["Titulo"]</h1></div>
-        <div class="col-sm-6 text-right"><a asp-page="/ClienteCRUD/Create" class="btn btn-info">Novo cliente</a><h1>@ViewData["Titulo"]</h1></div>
+        <div class="col-sm-6 d-flex justify-content-end"><a asp-page="/ClienteCRUD/Create" class="btn btn-info">Novo cliente</a></div>
     </div>
 </header>
 

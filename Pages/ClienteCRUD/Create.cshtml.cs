@@ -15,6 +15,7 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
         public CreateModel(ApplicationDbContext context)
         {
             _context = context;
+            Cliente = new();
         }
 
         public void OnGet()

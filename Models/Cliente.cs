@@ -20,6 +20,7 @@ namespace AspNetCoreWebApp.Models
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
         [MaxLength(11, ErrorMessage = "O campo {0} deve conter no máximo {1} caracteres.")]
         [RegularExpression(@"[0-9]{11}$", ErrorMessage = "O campo {0} deve ser preenchido com 11 dígitos numéricos.")]
+        [UIHint("_CustomCPF")]
         public string CPF { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
