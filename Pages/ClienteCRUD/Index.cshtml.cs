@@ -14,7 +14,7 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
         public IndexModel(ApplicationDbContext context)
         {
             _context = context;
-            Clientes = new List<Cliente>();
+            Clientes = new();
         }
 
         public async Task OnGetAsync()
@@ -24,13 +24,9 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
 
         public async Task<IActionResult> OnPostDeleteAsync(int? id)
         {
-            if(id == null)
-            {
-                return BadRequest();
-            }
-
+            if(id == null) return BadRequest();
+            
             var cliente = await _context.Clientes.FirstOrDefaultAsync(x => x.Id == id);
-
             if(cliente != null)
             {
                 _context.Clientes.Remove(cliente);
