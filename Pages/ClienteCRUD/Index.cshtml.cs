@@ -19,17 +19,17 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
 
         public async Task OnGetAsync()
         {
-            Clientes = await _context.Clientes.ToListAsync();
+            Clientes = await _context.Cliente.ToListAsync();
         }
 
         public async Task<IActionResult> OnPostDeleteAsync(int? id)
         {
             if(id == null) return BadRequest();
             
-            var cliente = await _context.Clientes.FirstOrDefaultAsync(x => x.Id == id);
+            var cliente = await _context.Cliente.FirstOrDefaultAsync(x => x.Id == id);
             if(cliente != null)
             {
-                _context.Clientes.Remove(cliente);
+                _context.Cliente.Remove(cliente);
                 await _context.SaveChangesAsync();
             }
 

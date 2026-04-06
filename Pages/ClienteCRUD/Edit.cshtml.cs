@@ -22,7 +22,7 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null) return NotFound();
-            Cliente = await _context.Clientes.FirstOrDefaultAsync(x => x.Id == id);
+            Cliente = await _context.Cliente.FirstOrDefaultAsync(x => x.Id == id);
             if (Cliente == null) return NotFound();
             return Page();
         }
@@ -51,7 +51,7 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
 
         private bool ClienteExiste(int id)
         {
-            return _context.Clientes.Any(x => x.Id == id);
+            return _context.Cliente.Any(x => x.Id == id);
         }
     }
 }

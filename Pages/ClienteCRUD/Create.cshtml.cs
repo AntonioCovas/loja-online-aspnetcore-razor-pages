@@ -28,7 +28,7 @@ namespace AspNetCoreWebApp.Pages.ClienteCRUD
             Cliente cliente = new();
             if(await TryUpdateModelAsync(cliente, "cliente", c => c.Nome, c => c.DataNascimento, c => c.CPF, c => c.Email))
             {
-                _context.Clientes.Add(cliente);
+                _context.Cliente.Add(cliente);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
             }

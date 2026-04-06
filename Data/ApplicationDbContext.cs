@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using AspNetCoreWebApp.Models;
 
 namespace AspNetCoreWebApp.Data
@@ -27,10 +23,10 @@ namespace AspNetCoreWebApp.Data
         }
 
         public DbSet<Produto> Produto { get; set; } = default!;
-        public DbSet<Cliente> Clientes { get; set; } = default!;
-        public DbSet<Pedido> Pedidos { get; set; } = default!;
-        public DbSet<Favorito> Favoritos { get; set; } = default!;
-        public DbSet<Visitado> Visitados { get; set; } = default!;
-        public DbSet<PedidoItem> PedidoItens { get; set; } = default!;
+        public DbSet<Cliente> Cliente { get; set; } = default!;
+        public DbSet<Pedido> Pedido { get; set; } = default!;
+        public DbSet<PedidoItem> PedidoItem { get; set; } = default!;
+        public DbSet<Favorito> Favorito { get; set; } = default!;
+        public DbSet<Visitado> Visitado { get; set; } = default!;
     }
 }
